@@ -13,8 +13,11 @@ body {
 
 .container {
   width: 100%;
-  min-height: 100vh;
-  padding: 20px;
+  height:100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
 }
 
 h2,
@@ -38,44 +41,37 @@ h3 {
   display: flex;
   align-items: center;
   justify-content: center;
-  flex-wrap: wrap;
-  gap: 30px;
-  max-width: 1100px;
-  margin: 0 auto;
-}
-
-.image {
-  flex: 1 1 320px;
-  max-width: 560px;
+  gap: 40px;
 }
 
 form {
-  width: min(100%, 360px);
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content:space-between;
-  gap: 16px;
+  gap: 10px;
+}
+.form{
+  padding:20px;
+  width: 450px;
 }
 
-.image img {
-  display: block;
-  width: 100%;
-  max-width: 100%;
-  height: auto;
-}
 
 input {
-  border-radius: 6px;
-  background: white;
+  border-radius:0 6px 6px 0;
+  background: transparent;
   font-size: 15px;
-  border:none;
   padding:20px;
-  width: 400px;px;
+  width: 350px;
+
 }
 
-input::placeholder {
-  color:#aaa
+i{
+  border:1px solid gray;
+  border-radius:6px 0 0 6px;
+
+}
+
+input:focus{
+  outline:none;
 }
 
 button {
@@ -83,6 +79,11 @@ button {
   border-radius: 6px;
   font-size: 16px;
   cursor: pointer;
+}
+.buttons{
+display:flex;
+justify-content: space-evenly;
+align-items: center;
 }
 
 button[type="submit"] {
@@ -102,6 +103,21 @@ button[type="button"] {
 
 }
 
+
+
+img{
+  width:50%;
+  height:50%;
+  padding:20px;
+
+}
+.image{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 450px;
+}
+
 .input-group{
   display:flex;
   width: 100%;
@@ -117,10 +133,20 @@ button[type="button"] {
 
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1008px) {
   .container-1 {
+    display: flex;
     flex-direction: column;
   }
+
+  .container {
+  width: 100%;
+  height:100vh;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  
+}
 
   .image {
     width: 100%;
